@@ -1,0 +1,82 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+#game-container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+button.choice {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+button.choice.correct::after {
+    content: '✓';
+    color: green;
+    font-size: 18px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+button.choice.wrong::after {
+    content: '✗';
+    color: red;
+    font-size: 18px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+button.choice:hover {
+    background-color: #0056b3;
+}
+
+#restart-btn {
+    display: none;
+    margin-top: 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#restart-btn:hover {
+    background-color: #218838;
+}
+
+#score, #lives {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+}
